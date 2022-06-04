@@ -140,7 +140,7 @@
             android:src="@drawable/ic_baseline_flight_land_24"
             app:layout_constraintBottom_toTopOf="@id/divider_end2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/divider_start2"
+            app:layout_constraintTop_toBottomOf="@id/divider_end1"
             app:tint="#506CF8"
             android:contentDescription="@string/plane" />
 
