@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    tools:context=".CrimeListFragment"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radius"
+        >
+
+        <ImageView
+            android:id="@+id/image_air"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:src="@drawable/ic_baseline_airplanemode_active_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="168dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_baseline_arrow_right_alt_24"
+            app:layout_constraintBottom_toBottomOf="@id/start_date_view"
+            app:layout_constraintEnd_toStartOf="@+id/end_date_view"
+            app:layout_constraintStart_toEndOf="@id/start_date_view"
+            app:layout_constraintTop_toTopOf="@id/start_date_view" />
+
+        <TextView
+            android:id="@+id/start_date_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_air"
+            tools:text="17:25" />
+
+
+        <TextView
+            android:id="@+id/end_date_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/like"
+            app:layout_constraintStart_toEndOf="@id/start_date_view"
+            app:layout_constraintTop_toBottomOf="@id/image_air"
+            tools:text="17:25" />
+
+        <TextView
+            android:id="@+id/start_city_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/start_date_view"
+            app:layout_constraintTop_toBottomOf="@id/start_date_view"
+            tools:text="Орск" />
+
+
+        <TextView
+            android:id="@+id/end_city_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/end_date_view"
+
+            app:layout_constraintTop_toBottomOf="@id/end_date_view"
+            tools:text="Москва" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/like"
+            style="@style/Widget.AppTheme.LikeCheckBox"
+            android:layout_width="47dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="8dp"
+            android:checkable="true"
+            app:icon="@drawable/ic_like_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

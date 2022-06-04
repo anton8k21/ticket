@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CardTicket">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_button"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#CED9FA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/Widget.AppCompat.Button.Small"
+            android:id="@+id/buy_ticket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/background_button"
+            android:text="@string/issue_a_ticket"
+            android:textColor="#303F9F"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="16dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radius_fragment_land">
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider_start1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbarSize="4dp"
+                app:dividerColor="#A6A5A5"
+                app:layout_constraintBottom_toTopOf="@id/linear_info_start"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:contentDescription="@string/plane"
+                android:src="@drawable/ic_outline_flight_takeoff_24"
+                app:layout_constraintBottom_toTopOf="@id/divider_start2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider_start1"
+                app:tint="#506CF8" />
+
+            <LinearLayout
+                android:id="@+id/linear_info_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/departure_time" />
+
+                <TextView
+                    android:id="@+id/start_date_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textStyle="bold"
+                    tools:text="17:25" />
+
+                <TextView
+                    android:id="@+id/start_city_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="Орск, Орск OSW" />
+
+            </LinearLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider_start2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbarSize="4dp"
+                app:dividerColor="#A6A5A5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linear_info_start" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider_end1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbarSize="4dp"
+                app:dividerColor="#A6A5A5"
+                app:layout_constraintBottom_toTopOf="@id/end_info"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:contentDescription="@string/plane"
+                android:src="@drawable/ic_baseline_flight_land_24"
+                app:layout_constraintBottom_toTopOf="@id/divider_end2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/divider_end1"
+                app:tint="#506CF8" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/material_end1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbarSize="4dp"
+                app:dividerColor="#A6A5A5"
+                app:layout_constraintBottom_toTopOf="@id/end_info"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/end_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear_info_start">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/arrival_time" />
+
+                <TextView
+                    android:id="@+id/end_date_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textStyle="bold"
+                    tools:text="17:25" />
+
+                <TextView
+                    android:id="@+id/end_city_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="Храброво, Калининград KGD" />
+
+            </LinearLayout>
+
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/divider_end2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbarSize="4dp"
+                app:dividerColor="#A6A5A5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/end_info" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="like,price_view"
+                app:layout_constraintTop_toBottomOf="@id/end_info"
+                tools:layout_editor_absoluteX="4dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/like"
+                style="@style/Widget.AppTheme.LikeCheckBox"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:checkable="true"
+                app:icon="@drawable/ic_like_24"
+                app:layout_constraintTop_toBottomOf="@id/header"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/price_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/header"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="8234Р" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/price_per_ticket"
+                app:layout_constraintBottom_toBottomOf="@id/price_view"
+                app:layout_constraintStart_toEndOf="@+id/price_view" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
