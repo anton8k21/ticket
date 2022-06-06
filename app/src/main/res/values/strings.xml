@@ -1,11 +1,12 @@
 <resources>
     <string name="app_name">Tickets</string>
-    <string name="flight_time">Время в воздухе</string>
+    <string name="flight_time">flight time</string>
+    <string name="price_per_ticket">for a ticket for 1 passenger</string>
+    <string name="departure_time">departure, local time</string>
+    <string name="arrival_time">arrival, local time</string>
+    <string name="retry_loading">update</string>
+    <string name="error_loading">Failed to load data</string>
+    <string name="plane" translatable="false">plane</string>
+    <string name="issue_a_ticket">Issue a ticket</string>
     <string name="price_per_ticket">за билет на 1 пасажира</string>
-    <string name="departure_time">вылет, время местное</string>
-    <string name="arrival_time">прилёт, время местное</string>
-    <string name="retry_loading">Повторить</string>
-    <string name="error_loading">Не удалось загрузить данные</string>
-    <string name="plane">plane</string>
-    <string name="issue_a_ticket">Оформить билет</string>
 </resources>

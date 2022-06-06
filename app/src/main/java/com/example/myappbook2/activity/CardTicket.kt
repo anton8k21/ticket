@@ -33,8 +33,8 @@ class CardTicket: Fragment() {
     fun assigningValues(binding: FragmentTicketBinding, ticket: Ticket){
         binding.startCityView.text = ticket.startCity + " (" + ticket.startCityCode + ")"
         binding.endCityView.text = ticket.endCity + " (" + ticket.endCityCode + ")"
-        binding.startDateView.text = ticket.getDate(ticket.startDate,"YYYY-MM-d HH:MM")
-        binding.endDateView.text = ticket.getDate(ticket.endDate,"YYYY-MM-d HH:MM")
+        binding.startDateView.text = ticket.getDate(ticket.startDate,"dd MMM yyyy  в HH:MM")
+        binding.endDateView.text = ticket.getDate(ticket.endDate,"dd MMM yyyy  в HH:MM")
         binding.priceView.text = ticket.price.toString()
         binding.like.isChecked = ticket.likedByMe
         binding.buyTicket?.setOnClickListener {

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tickets</string>
+    <string name="flight_time">Время в воздухе</string>
+    <string name="price_per_ticket">за билет на 1 пасажира</string>
+    <string name="departure_time">вылет, время местное</string>
+    <string name="arrival_time">прилёт, время местное</string>
+    <string name="retry_loading">Повторить</string>
+    <string name="error_loading">Не удалось загрузить данные</string>
+    <string name="issue_a_ticket">Оформить билет</string>
+    <string name="plane" translatable="false">plane</string>
+</resources>

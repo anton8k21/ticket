@@ -2,17 +2,14 @@ package com.example.myappbook2.activity
 
 import android.os.Build
 import android.os.Bundle
-import androidx.activity.viewModels
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myappbook2.CrimeListFragment
-import com.example.myappbook2.viewModel.CrimeListViewModel
 import com.example.myappbook2.R
 import com.example.myappbook2.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
-    val crimeListViewModel: CrimeListViewModel by viewModels()
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +27,5 @@ class MainActivity : AppCompatActivity() {
                 .add(R.id.fragment_container, fragment)
                 .commit()
         }
-
-
     }
 }

@@ -40,8 +40,8 @@ class CrimeAdapter (
                 like.isChecked = ticket.likedByMe
                 startCityView.text = ticket.startCity
                 endCityView.text = ticket.endCity
-                startDateView.text = ticket.getDate(ticket.startDate, "HH:MM")
-                endDateView.text = ticket.getDate(ticket.endDate, "HH:MM")
+                startDateView.text = ticket.getDate(ticket.startDate, "dd.MM")
+                endDateView.text = ticket.getDate(ticket.endDate, "dd.MM")
 
                 root.setOnClickListener{
                     onInteractionListener.onShare(ticket)

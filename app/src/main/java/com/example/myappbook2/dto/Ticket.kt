@@ -8,19 +8,15 @@ data class Ticket(
     val startCityCode: String,
     val endCity: String,
     val endCityCode: String,
-    var startDate: String,
-    val endDate: String,
+    var startDate: Date,
+    val endDate: Date,
     val price: Int,
     var likedByMe: Boolean = false,
     val searchToken: String
 ) {
-    fun getDate(Date: String, pattern:String): String{
-        val sdf = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault())
-        val output = SimpleDateFormat(pattern, Locale.getDefault())
-        val d: Date = sdf.parse(Date)
-        val dateOutput = output.format(d).toString()
-        return dateOutput
-
+    fun getDate(date: Date, pattern:String): String{
+        val dateSimple = SimpleDateFormat(pattern, Locale.getDefault())
+        return dateSimple.format(date)
 
     }
 }
