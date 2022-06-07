@@ -8,5 +8,4 @@
     <string name="error_loading">Failed to load data</string>
     <string name="plane" translatable="false">plane</string>
     <string name="issue_a_ticket">Issue a ticket</string>
-    <string name="price_per_ticket">за билет на 1 пасажира</string>
 </resources>
